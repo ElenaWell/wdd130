@@ -1,5 +1,9 @@
 main {
-    max-width: 800px;
+    max-width: 840px;
+}
+main img {
+    width: 150px;
+    height: auto;
 }
 nav {
     background-color: darkblue;
