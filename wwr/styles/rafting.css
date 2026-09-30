@@ -170,6 +170,10 @@ footer {
 }
 
 /* Contact Information */
+main > h1 {
+    text-align: center;
+    margin: 24px 0;
+}
 
 .company-info {
     display: grid;
@@ -189,7 +193,7 @@ footer {
 
 .company-info iframe {
     grid-column: 1 / 3;
-    width: 100;
+    width: 100%;
     border: none;
 }
 
@@ -205,7 +209,7 @@ footer {
     text-align: center;
 }
 
-.employess figure {
+.employees figure {
     text-align: center;
 }
 
