@@ -16,6 +16,7 @@
 body {
     font-family: var(--body-font);
     color: var(--primary-color);
+    background-color: #DFF3F7;
 }
 
 header {
@@ -57,11 +58,26 @@ nav ul {
 }
 
 nav a {
-    color: var(--secondary-color);
+    position: relative;
+    display: block;
+    padding: 10px 14px;
+    color: #fff;
+    background-color: #0A7180;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 6px;
+    overflow: hidden;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 nav a:hover {
-    color: var(--accent1-color);
+    color: #fff;
+    background-color: var(--accent1-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(11, 57, 84, 0.2);
 }
 
 .socialmedia a {
@@ -85,11 +101,12 @@ nav a:hover {
     position: absolute;
     top: 20px;
     width: 100%;
-    padding: 16px;
+    padding: 20px;
     text-align: center;
     opacity: 0.7;
     background-color: var(--primary-color);
     color: #fff;
+    font-size: 2.2rem;
 }
 
 .hero article {
@@ -109,6 +126,127 @@ nav a:hover {
     margin: 0 0 16px 16px;
 }
 
+/* Home Hero */
+
+.home-hero > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.home-hero {
+    position: relative;
+}
+
+.home-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to bottom,
+            #DFF3F7 0%,
+            transparent 5%,
+            transparent 75%,
+            #DFF3F7 100%
+        );
+    pointer-events: none;
+}
+.home-hero > p {
+    position: absolute;
+    top: 110px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px #000;
+    transition: color 0.3s ease;
+}
+
+.home-hero > p:hover {
+    color: var(--accent1-color);
+}
+.home-hero .btn {
+    position: absolute;
+    top: 165px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    color: #fff;
+    background-color: var(--accent1-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.home-hero .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.home-cta {
+    text-align: center;
+    padding: 24px;
+    background-color: #DFF3F7;
+}
+
+.home-cta a {
+    display: inline-block;
+    padding: 14px 28px;
+    color: #fff;
+    background-color: var(--accent1-color);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 6px;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.home-cta a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(11, 57, 84, 0.2);
+}
+
+/* Home Grid */
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.home-grid .grid-item {
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+.home-grid .grid-item h2 {
+    margin: 16px 0 8px;
+}
+
+.home-grid .grid-item p {
+    line-height: 1.6;
+    padding: 12px;
+    border-top: 3px solid transparent;
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.home-grid .grid-item:hover p {
+    background-color: #FFE1D6;
+    border-top-color: #FFE1D6;
+}
+
+
+
 /* History */
 
 .history {
@@ -124,6 +262,22 @@ nav a:hover {
 
 .history img {
     width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(11, 57, 84, 0.15);
+}
+
+.adventures img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.adventures figure:hover img {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(11, 57, 84, 0.18);
 }
 
 /* Adventures */
@@ -170,6 +324,7 @@ footer {
 }
 
 /* Contact Information */
+
 main > h1 {
     text-align: center;
     margin: 24px 0;
@@ -198,6 +353,7 @@ main > h1 {
 }
 
 /* Employees */
+
 .employees {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -286,3 +442,194 @@ main > h1 {
 .contact-form button:hover {
     background-color: var(--secondary-color);
 }
+
+/* Home Page | Newsletter */
+
+.newsletter {
+    text-align: center;
+    margin: 24px 0;
+    padding: 24px;
+    background-color: var(--accent2-color);
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.newsletter input {
+    padding: 10px;
+}
+
+.newsletter button {
+    padding: 10px 16px;
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--accent1-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(11, 57, 84, 0.2);
+}
+/* Trips */
+
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.trip-grid section {
+    transition: transform 0.3s ease;
+}
+
+.trip-grid section:hover {
+    transform: translateY(-5px);
+}
+
+.trip-grid section:hover h2 {
+    color: var(--accent1-color);
+}
+
+.trip-grid section h2 {
+    text-align: center;
+    margin: 16px 0;
+}
+
+.trip-grid section p {
+    border-top: 3px solid #DFF3F7;
+    padding: 12px;
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.trip-grid section:hover p {
+    background-color: #FFE1D6;
+    border-top-color: #FFE1D6;
+}
+.trip-grid section img {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    border: 3px solid var(--accent1-color);
+    transition: transform 0.3s ease;
+}
+
+.trip-grid section:hover img {
+    transform: scale(1.03);
+}
+
+.trip-intro {
+    max-width: 700px;
+    margin: 0 auto 32px;
+    padding: 16px 24px;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Trips Call to Action */
+
+.trip-cta {
+    text-align: center;
+    padding: 24px;
+    background-color: var(--accent2-color);
+}
+
+.trip-cta a {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 12px 22px;
+    color: #fff;
+    background-color: var(--accent1-color);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 10px;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.trip-cta a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(11, 57, 84, 0.2);
+}
+
+/* Trips Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+}
+
+table caption {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(11, 57, 84, 0.15);
+}
+tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(223, 243, 247, 0.5);
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 107, 53, 0.12);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.history img,
+.adventures img,
+.grid-item img,
+.employees img {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(11, 57, 84, 0.15);
+}
+.socialmedia a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #DFF3F7;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.socialmedia a:hover {
+    background-color: #FFE1D6;
+    transform: translateY(-3px);
+}
+
+.socialmedia img {
+    width: 32px;
+}
+
