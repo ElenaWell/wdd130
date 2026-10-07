@@ -6,6 +6,11 @@
         <meta name="description" content="Experience the thrill of whitewater rafting, explore unforgettable river trips, and discover your next adventure.">
         <meta name="author" content="Elena Well Diaz">
         <title>Whitewater Rafting | Home Page</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/rafting.css">
     </head>
 
@@ -30,8 +35,6 @@
                     alt="Rafting through whitewater rapids.">
                 <h1>Feel the Rush</h1>
                 <p>Ride the current. Live the moment.</p>
-                
-               
             </div>
             <div class="home-cta">
                 <a href="trips.html">Explore Our Trips</a>
@@ -54,11 +57,24 @@
                 <h2>Stay Updated</h2>
                 <p>Subscribe to our newsletter and
                     never miss an update on the latest rafting adventures and special offers.</p>
-                    <form  method="post">
-                        <input type="text" name="name" placeholder="Enter your name">
-                        <input type="email" name="email" placeholder="Enter your email" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
+                    <form method="post">
+                    <label for="newsletter-name">Name</label>
+                    <input
+                        type="text"
+                        id="newsletter-name"
+                        name="name"
+                        placeholder="Enter your name">
+
+                   <label for="newsletter-email">Email</label>
+                   <input
+                        type="email"
+                        id="newsletter-email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required>
+
+                   <button type="submit">Subscribe</button>
+                   </form>
 
             </section>
 
