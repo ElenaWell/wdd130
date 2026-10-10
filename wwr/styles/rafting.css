@@ -80,9 +80,7 @@ nav a:hover {
     box-shadow: 0 4px 10px rgba(11, 57, 84, 0.2);
 }
 
-.socialmedia a {
-    text-decoration: none;
-}
+
 
 /* Hero */
 
@@ -329,6 +327,7 @@ footer {
 .socialmedia {
     display: flex;
     gap: 1rem;
+    text-decoration: none;
 }
 
 .socialmedia a {
